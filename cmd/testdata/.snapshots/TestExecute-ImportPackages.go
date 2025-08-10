@@ -3,10 +3,11 @@
 package test
 
 import (
-	"github.com/masaushi/accessory/cmd/testdata/import_packages/sub1"
-	sub "github.com/masaushi/accessory/cmd/testdata/import_packages/sub2"
-	. "github.com/masaushi/accessory/cmd/testdata/import_packages/sub3"
 	"time"
+
+	"github.com/lrstanley/accessory/cmd/testdata/import_packages/sub1"
+	sub "github.com/lrstanley/accessory/cmd/testdata/import_packages/sub2"
+	. "github.com/lrstanley/accessory/cmd/testdata/import_packages/sub3"
 )
 
 func (t *Tester) Field1() time.Time {
@@ -106,4 +107,3 @@ func (t *Tester) SetField7(val []*sub.SubTester) {
 	}
 	t.field7 = val
 }
-

@@ -1,4 +1,4 @@
-module github.com/masaushi/accessory
+module github.com/lrstanley/accessory
 
 go 1.24
 

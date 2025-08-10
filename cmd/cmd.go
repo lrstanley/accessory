@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/afero"
 
-	"github.com/masaushi/accessory/internal/accessor"
+	"github.com/lrstanley/accessory/internal/accessor"
 )
 
 // Version is the version of `accessory`, injected at build time.
@@ -21,7 +21,7 @@ func newUsage(flags *flag.FlagSet) func() {
 		fmt.Fprintf(os.Stderr, "Usage of accessory:\n")
 		fmt.Fprintf(os.Stderr, "\taccessory [flags] [directory]\n")
 		fmt.Fprintf(os.Stderr, "For more information, see:\n")
-		fmt.Fprintf(os.Stderr, "\thttps://github.com/masaushi/accessory\n")
+		fmt.Fprintf(os.Stderr, "\thttps://github.com/lrstanley/accessory\n")
 		fmt.Fprintf(os.Stderr, "Flags:\n")
 		flags.PrintDefaults()
 	}
@@ -78,7 +78,7 @@ func Execute(fs afero.Fs, args []string) {
 		os.Exit(1)
 	}
 
-	var options = []accessor.Option{
+	options := []accessor.Option{
 		accessor.Type(*typeName),
 		accessor.Output(*output),
 		accessor.Receiver(*receiver),
